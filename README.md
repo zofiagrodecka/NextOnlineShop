@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## How to configure your tools: eslint and tailwind?
+
+Additional eslint plugins:
+
+```
+pnpm add -D \
+	@typescript-eslint/eslint-plugin \
+	@typescript-eslint/parser \
+	eslint-plugin-import \
+	eslint-config-prettier
+
+pnpm add -D \
+	prettier \
+	prettier-plugin-tailwindcss
+```
+
+Format files with prettier:
+
+```
+pnpm prettier --write .
+```
