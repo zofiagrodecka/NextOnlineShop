@@ -1,5 +1,10 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import { ProductsList } from "./productsList";
+
+export const metadata: Metadata = {
+  title: "Products",
+};
 
 export default async function ProductsPage() {
   return (
