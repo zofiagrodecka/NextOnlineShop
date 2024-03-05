@@ -1,3 +1,5 @@
+import Link from "next/dist/client/link";
+
 export async function ProductsList({ page }: { page: number }) {
   const take = 10;
   const offset = 10 * (page - 1);
@@ -13,7 +15,9 @@ export async function ProductsList({ page }: { page: number }) {
   return (
     <>
       {products.map((product) => (
-        <li key={product.id}>{product.title}</li>
+        <li key={product.id}>
+          <Link href={`/product/${product.id}`}>{product.title}</Link>
+        </li>
       ))}
     </>
   );
