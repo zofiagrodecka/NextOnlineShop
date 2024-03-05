@@ -58,3 +58,9 @@ Format files with prettier:
 ```
 pnpm prettier --write .
 ```
+
+MDX:
+
+```
+pnpm add @next/mdx @mdx-js/loader @mdx-js/react @types/mdx
+```
