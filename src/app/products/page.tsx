@@ -1,12 +1,13 @@
-export default async function ProductsPage() {
-  const res = await fetch("https://naszsklep-api.vercel.app/api/products");
-  const products = (await res.json()) as { id: string; title: string }[];
+import { ProductsList } from "./productsList";
 
+export default async function ProductsPage() {
   return (
-    <ul>
-      {products.map((product) => (
-        <li key={product.id}>{product.title}</li>
-      ))}
-    </ul>
+    <div>
+      <h2 className="mb-4 text-xl font-bold">Lista produktów</h2>
+      <ul>
+        <ProductsList page={1} />
+        <ProductsList page={2} />
+      </ul>
+    </div>
   );
 }
